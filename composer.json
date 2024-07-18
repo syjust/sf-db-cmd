@@ -1,7 +1,7 @@
 {
   "name"       : "syjust/sf-db-cmd",
   "description": "Symfony DB command",
-  "version"    : "1.0.0",
+  "version"    : "1.1.0",
   "type"       : "symfony-bundle",
   "require"    : {
     "php"                      : ">=8.2",
