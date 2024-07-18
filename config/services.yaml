@@ -1,4 +1,9 @@
 services:
+  # It is recommended by Symfony to avoid autowiring in the bundles.
+  # At this time, I prefer to depend on symfony/service-contract
+  # and to use "Required" in my services.
+  # If the project growth and becomes a great success,
+  # then we will see to follow this guideline :-)
   _defaults:
     autoconfigure: true
     autowire: true
