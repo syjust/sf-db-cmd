@@ -3,6 +3,7 @@
     "description": "Symfony DB command",
     "type": "library",
     "require": {
+       "php": ">=8.2",
         "symfony/console": "^7.1",
         "symfony/service-contracts": "^3.5",
         "symfony/process": "^7.1",
