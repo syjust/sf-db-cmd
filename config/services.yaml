@@ -1,9 +1,3 @@
 services:
-    _defaults:
-        autowire: true
-        autoconfigure: true
-
-    Syjust\SfDbCmd:
-        resource: '../src/'
-        exclude:
-            - '../src/DbCommandBundle.php'
+    syjust_sfdbcmd.db_command:
+        class: Syjust\SfDbCmd\Command\DbCommand
