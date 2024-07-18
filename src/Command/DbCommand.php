@@ -115,7 +115,7 @@ class DbCommand extends Command
     public function getCommand(array $connection): string
     {
         return [
-            'mysql'  => 'mysql',
+            'pdo_mysql'  => 'mysql',
             'pdo_pgsql'  => 'psql',
             'pdo_sqlite' => 'sqlite3',
             'sqlsrv' => 'sqlcmd',
@@ -149,7 +149,7 @@ class DbCommand extends Command
         return array_merge([
             '--host=' . $connection['host'],
             '--port=' . $connection['port'],
-            '--user=' . $connection['username'],
+            '--user=' . $connection['user'],
         ],
             $this->getOptionalArguments([
                 'password'    => '--password=' . $connection['password'],
@@ -196,7 +196,7 @@ class DbCommand extends Command
     protected function getPgsqlEnvironment(array $connection): ?array
     {
         return array_merge(...$this->getOptionalArguments([
-            'username' => ['PGUSER' => $connection['username']],
+            'username' => ['PGUSER' => $connection['user']],
             'host'     => ['PGHOST' => $connection['host']],
             'port'     => ['PGPORT' => $connection['port']],
             'password' => ['PGPASSWORD' => $connection['password']],
@@ -226,7 +226,7 @@ class DbCommand extends Command
     {
         return array_merge(...$this->getOptionalArguments([
             'database'                 => ['-d', $connection['dbname']],
-            'username'                 => ['-U', $connection['username']],
+            'username'                 => ['-U', $connection['user']],
             'password'                 => ['-P', $connection['password']],
             'host'                     => [
                 '-S',
