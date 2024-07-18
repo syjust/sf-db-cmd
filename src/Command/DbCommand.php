@@ -2,7 +2,6 @@
 namespace Syjust\SfDbCmd\Command;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Bridge\Doctrine\ManagerRegistry;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -22,7 +21,6 @@ class DbCommand extends Command
 {
     private SymfonyStyle $io;
     private EntityManagerInterface $em;
-    private ManagerRegistry $manager;
 
     #[Required]
     public function setEm(EntityManagerInterface $em): void
