@@ -1,2 +1,6 @@
 services:
-    Syjust\SfDbCmd\Command\DbCommand: ~
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  Syjust\SfDbCmd\Command\DbCommand: ~
