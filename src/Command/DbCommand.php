@@ -1,4 +1,5 @@
 <?php
+namespace Syjust\SfDbCmd\Command;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bridge\Doctrine\ManagerRegistry;

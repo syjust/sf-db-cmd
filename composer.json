@@ -1,21 +1,26 @@
 {
-    "name": "syjust/sf-db-cmd",
-    "description": "Symfony DB command",
-    "version": "1.0.0",
-    "type": "library",
-    "require": {
-       "php": ">=8.2",
-        "symfony/console": "^7.1",
-        "symfony/service-contracts": "^3.5",
-        "symfony/process": "^7.1",
-        "symfony/doctrine-bridge": "^7.1",
-        "doctrine/orm": "^3.2"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Sylvain JUST",
-            "email": "sylvain@justdevops.com"
-        }
-    ]
+  "name"       : "syjust/sf-db-cmd",
+  "description": "Symfony DB command",
+  "version"    : "1.0.0",
+  "type"       : "library",
+  "require"    : {
+    "php"                      : ">=8.2",
+    "symfony/console"          : "^7.1",
+    "symfony/service-contracts": "^3.5",
+    "symfony/process"          : "^7.1",
+    "symfony/doctrine-bridge"  : "^7.1",
+    "doctrine/orm"             : "^3.2"
+  },
+  "license"    : "MIT",
+  "autoload"   : {
+    "psr-4": {
+      "Syjust\\SfDbCmd\\": "src/"
+    }
+  },
+  "authors"    : [
+    {
+      "name" : "Sylvain JUST",
+      "email": "sylvain@justdevops.com"
+    }
+  ]
 }
