@@ -2,13 +2,13 @@
 
 namespace Syjust\SfDbCmd;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\AbstractBundle;
 
 /**
  * Class DbCommandBundle
  *
  * @package Syjust\SfDbCmd
  */
-class DbCommandBundle extends Bundle
+class DbCommandBundle extends AbstractBundle
 {
 }
