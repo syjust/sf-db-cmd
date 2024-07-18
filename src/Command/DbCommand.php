@@ -95,11 +95,16 @@ class DbCommand extends Command
             return Command::FAILURE;
         }
 
-        (new Process(
-            array_merge([$this->getCommand($connection)], $this->commandArguments($connection)), null, $this->commandEnvironment($connection)
-        ))->setTimeout(null)->setTty(true)->mustRun(function ($type, $buffer) {
-                $this->io->write($buffer);
-            })
+        (
+            new Process(
+                array_merge([$this->getCommand($connection)], $this->commandArguments($connection)),
+                null,
+                $this->commandEnvironment($connection)
+            )
+        )
+            ->setTimeout(null)
+            ->setTty(true)
+            ->mustRun(function ($type, $buffer) { $this->io->write($buffer); })
         ;
 
         return 0;

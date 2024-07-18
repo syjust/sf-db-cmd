@@ -39,3 +39,16 @@ This command was only tested with `pdo_mysql` & `pdo_sqlite` at this time in int
 * First, please use [conventional commit](https://www.conventionalcommits.org/en/v1.0.0-beta.4/),
 * then, submit your Pull Request onto the [GitHub Repo](https://github.com/syjust/sf-db-cmd.git),
 * and we will see 😋.
+
+## Known issues
+
+If you get the following message:
+
+```shell
+TTY mode requires /dev/tty to be read/writable.
+```
+
+1. Ensure `/dev/tty` is writable in shell mode (`echo foobar >> /dev/tty`).
+2. Ensure you are on unix based OS (`/` is the directory separator).
+3. Ensure PHP is able to write in `/dev/tty` (`<?php is_writable('/dev/tty') ?>`)
+   If the latest test fails: add ':/dev/tty' to the `open_basedir` config in your `php.ini`.
